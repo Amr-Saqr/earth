@@ -1,0 +1,186 @@
+/* ............................ Start Gloabal Rules ............................ */
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+  :root {
+    --primary-color: #2c541d;
+    --secondary-color: #74a84a;
+    --main-padding-top: 80px;
+    --main-padding-bottom: 80px;
+    --main-transtion: .3s;
+    --font-color: #777;
+    --main-line-height: 1.7;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Jost', sans-serif;
+  }
+  ::selection {
+    background-color: var(--secondary-color);
+    color: black;
+  }
+  a {
+    text-decoration: none;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  /* ............................ End Gloabal Rules ............................ */
+
+
+
+
+  /* ............................ Start Header ............................ */
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+@media (max-width: 991px) {
+  .header {
+    padding: 30px;
+  }
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.header .logo {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: black;
+}
+.header .main-nav {
+  display: flex;
+}
+@media (max-width: 991px) {
+  .header .main-nav{
+    display: none;
+  }
+  .header .fa-bars:hover + ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: calc(100% + 30px);
+    left: 0;
+    width: 100%;
+    background-color: white;
+  }
+  .header .main-nav li a {
+    padding: 30px 15px;
+    border-top: 1px solid #777;
+  }
+  .header .main-nav li:last-child a {
+    border-bottom: 1px solid #777;
+  }
+}
+.header  .main-nav li a{
+  padding: 30px 15px;
+  text-transform: uppercase;
+  color: black;
+  display: block;
+  font-size: 15px;
+  transition: 0.8s;
+  position: relative;
+}
+.header .main-nav li:first-child a {
+  color: var(--primary-color);
+}
+.header .fa-bars {
+  background-color: var(--secondary-color);
+  padding: 10px;
+  color: white;
+}
+@media (min-width: 991px) {
+  .header .fa-bars{
+    display: none;
+  }
+}
+.header .main-nav > li:hover > a {
+  color: var(--primary-color);
+}
+/* ............................ End Header............................ */
+
+
+
+
+
+/* ............................ Start Footer............................ */
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px , 1fr));
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 991px ) {
+  .footer .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.footer .nav-bar {
+  display: flex;
+}
+@media (max-width: 767px) {
+  .footer .nav-bar {
+    flex-direction: column;
+    padding-top: 20px;
+  }
+}
+.footer .nav-bar a{
+  display: block;
+  color: black;
+  padding: 30px 10px;
+}
+@media (max-width: 767px) {
+  .footer .nav-bar a {
+    padding: 10px 0;
+    text-align: center;
+  }
+}
+.footer .logo {
+  color: black;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* ............................ End Footer............................ */
+
